@@ -1,8 +1,15 @@
 <%- include('partials/header.ejs') %>
-    <h1>Comments</h1>
-    <ul>
-        <% for(let c of comments){ %>
-            <li><%= c.comment %> - <b><%= c.username %></b></li>
-        <% } %>
-    </ul>
+<h1>Comments</h1>
+<ul>
+  <% for(let c of comments){ %>
+  <li>
+    <%= c.comment %> -
+    <b><%= c.username %> <a href="/comments/<%= c.id %>">details</a></b>
+  </li>
+  <% } %>
+</ul>
+<hr />
+<div>
+  <button><a href="/comments/new">Make a new comment</a></button>
+</div>
 <%- include('partials/footer.ejs') %>

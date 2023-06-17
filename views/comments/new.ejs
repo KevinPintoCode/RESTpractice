@@ -1,17 +1,17 @@
 <%- include('partials/header') %>
 <h1>Make a new comment!</h1>
-<hr>
-<form action="">
-    <section>
-        <label for="username">Enter username:</label>
-        <input type="text" id="username" placeholder="Name" name="username">
-    </section>
-    <section>
-        <label for="comment">Write your comment:</label>
-        <br>
-        <textarea id="comment" cols="35" rows="5" name="comment" ></textarea>
-    </section>
-    <br>
-    <button>Submit</button>
+<hr />
+<form action="/comments" method="post">
+  <section>
+    <label for="username">Enter username:</label>
+    <input type="text" id="username" placeholder="Name" name="username" />
+  </section>
+  <section>
+    <label for="comment">Write your comment:</label>
+    <br />
+    <textarea id="comment" cols="35" rows="5" name="comment"></textarea>
+  </section>
+  <br />
+  <button>Submit</button><button><a href="/comments">Back to Index</a></button>
 </form>
 <%- include('partials/footer') %>
